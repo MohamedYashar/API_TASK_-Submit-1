@@ -1,5 +1,5 @@
 
-document.getElementById("search").addEventListener("click",getData)
+document.querySelector("#search").addEventListener("click",getData)
 
 function getData()
 {
@@ -10,7 +10,7 @@ function getData()
     .then((data)=>{
         console.log(data.slip.advice)
 
-        document.getElementById("output").innerHTML = data.slip.advice;
+        document.querySelector("#output").innerHTML = data.slip.advice;
         
     }).catch((err)=>console.log(err,"unable to fetch data"))
 }
